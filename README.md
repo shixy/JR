@@ -2,6 +2,8 @@ JR
 ==
 
 一个简单的javascript 富客户端框架。
+=
+
 整个项目是一个SPA项目(Single Page Application),以一个独立页面为入口，作为载体，其他的功能页面通过Ajax异步加载形成一个完整的系统。
 该框架主要是对整个项目的javascript进行统一管理及责任划分。
 
