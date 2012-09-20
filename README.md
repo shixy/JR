@@ -36,8 +36,7 @@ controllers
 
     调度中心，通过它来通知需要展现哪一个view
 
-    整个框架执行过程：
-
+整个框架执行过程：
     装载JR.core.js,JR.confg.js -> url#hash改变 -> 扫描JR.conf.js -> 找到对应的controller及method ->  加载使用到的view，并执行
     view的相关方法 -> 加载使用到的service -> 调用service方法 -> 加载使用到的model -> 调用model方法
 
