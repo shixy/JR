@@ -1,0 +1,103 @@
+<div>
+    <div class="w40 left">
+        <div class="box" id="summaryInfoContainer" >
+            <div class="box_top" >
+                <div class="box_title">概要</div>
+                <div class="box_btn">
+                    <a href="javascript:void(0)">刷新</a>
+                </div>
+            </div>
+            <div class="box_content">
+                <ul>
+                    <li>
+                        <img src="/images/host.png" alt="主机" >
+                       <span id="hostNum">0</span>
+                    </li>
+                    <li>
+                        <img src="/images/vm.png" alt="虚拟机">
+                        <span id="vmNum">0</span>
+                    </li>
+                    <li>
+                        <img src="/images/local_storage.png" alt="存储">
+                        <span id="storageNum">0</span>
+                    </li>
+                    <li>
+                        <img src="/images/user.png" alt="用户">
+                        <span id="userNum">0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="box" id="resTop5Container" >
+            <div class="box_top" >
+                <div class="box_title">资源池负荷Top5</div>
+                <div class="box_btn">
+                    <a href="javascript:void(0)" >刷新</a>
+                </div>
+            </div>
+            <div class="box_content" id="resTop5Chart">
+            </div>
+        </div>
+    </div>
+    <div class="box w60 right" id="hostTop5Container">
+        <div class="box_top" >
+            <div class="box_title">主机负荷Top5(最近10分钟)</div>
+            <div class="box_btn">
+                <a href="javascript:void(0)">刷新</a>
+            </div>
+        </div>
+        <div class="box_content">
+            <div id="hostDataWrapper">
+                <div id="cpuChartContainer" class="host_chart"></div>
+                <div id="memoryChartContainer" class="host_chart"></div>
+            </div>
+            <div id="hostWrapper">
+                <ul>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="clear"></div>
+<div class="box w100" id="resUsageConatiner">
+    <div class="box_top" >
+        <div class="box_title">资源使用情况</div>
+        <div class="box_btn">
+            <a href="javascript:void(0)" id="refreshUserChart">刷新</a>
+        </div>
+    </div>
+    <div class="box_content">
+        <div class="chart" id="cpuUsageChart"></div>
+        <div class="chart" id="memoryUsageChart"></div>
+        <div class="chart" id="localStorChart"></div>
+        <div class="chart" id="shareStorChart"></div>
+        <div class="chart" id="ipUsageChart"></div>
+    </div>
+</div>
+<div class="clear"></div>
+<div>
+    <div class="box w50 left" id="latestLogContainer">
+        <div class="box_top">
+            <div class="box_title">最新日志</div>
+            <div class="box_btn">
+                <a href="">刷新</a>
+                <a href="#apprep">更多</a>
+            </div>
+        </div>
+        <div class="box_content">
+
+        </div>
+    </div>
+    <div class="box w50 right" id="latestAppContainer">
+        <div class="box_top">
+            <div class="box_title">最新应用</div>
+            <div class="box_btn">
+                <a href="">刷新</a>
+                <a href="#apprep">更多</a>
+            </div>
+        </div>
+        <div class="box_content">
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+
+{{if status == "offline"}}
+<div class="chat_div unsend">
+    <div><span class="to">To:</span><span>${receiver}</span></div>
+    <div>${msg}</div>
+    <div style="float:right">
+        <a class="msg_sync" href="javascript:void(0)">同步</a>
+        <a class="msg_edit" href="javascript:void(0)">修改</a>
+        <a class="msg_del" href="javascript:void(0)">删除</a>
+    </div>
+</div>
+{{else receiver=="shixy"}}
+<div class="chat_div from_bac">
+    <div><span class="from">From:</span><span>${sender}</span></div>
+    <div>${msg}</div>
+</div>
+{{else}}
+<div class="chat_div to_bac">
+    <div><span class="to">To:</span><span>${receiver}</span></div>
+    <div>${msg}</div>
+</div>
+{{/if}}

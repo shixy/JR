@@ -1,0 +1,52 @@
+<style type="text/css">
+    .chat_div{
+        margin:10px;padding: 5px 10px; width: 90%;border-radius: 5px;
+        color: #ffffff;
+        font-weight: bold;font-size: 14px;
+    }
+    .from_bac{background-color: #89b0cd;}
+    .to_bac{background-color: #dd8c8e;}
+    .unsend{background-color: #eeeeee;color: #555}
+    .from{color:#eeeeee;font-size: 11px;margin-right: 10px;}
+    .to{color:#eee;font-size: 11px;margin-right: 10px;}
+    .unsend .to{color: #555;}
+</style>
+
+<div id="record_container">
+
+</div>
+<hr>
+<div>
+    <div style="float: left;padding-left: 30px;">
+        <span style="font-size: 16px;">@</span>
+        <input id="receiver" type="text" style="width: 100px;"><br>
+        <textarea id="message" style="width:500px;"></textarea>
+    </div>
+    <div style="float:left;">
+        <button id="sendMsg" class="btn_link" style="height: 50px;width: 100px;margin-top: 30px;margin-left: 15px;">发送</button>
+    </div>
+</div>
+<script type="text/x-jquery-tmpl" id="msg-table" >
+    {{if status == "offline"}}
+    <div class="chat_div unsend">
+        <div>
+            <div style="float:left;"><span class="to">To:</span><span>${receiver}</span></div>
+            <div style="float:right;">
+                <a class="msg_sync" msg_id="${msgId}" href="javascript:void(0)">同步</a>
+                <a class="msg_del" msg_id="${msgId}" href="javascript:void(0)">删除</a>
+            </div>
+        </div>
+        <div style="clear:both;">${msg}</div>
+    </div>
+    {{else receiver=="shixy"}}
+    <div class="chat_div from_bac">
+        <div><span class="from">From:</span><span>${sender}</span></div>
+        <div>${msg}</div>
+    </div>
+    {{else}}
+    <div class="chat_div to_bac">
+        <div><span class="to">To:</span><span>${receiver}</span></div>
+        <div>${msg}</div>
+    </div>
+    {{/if}}
+</script>

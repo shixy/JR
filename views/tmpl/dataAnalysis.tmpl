@@ -1,0 +1,36 @@
+<div class="select_slice">
+	<span>请选择源数据段</span>
+	<select id="dataNumSelect">
+        <option value="LAST_TEN_MINUTES">近十分钟</option>
+        <option value="LAST_A_HOUR">近一小时</option>
+        <option value="LAST_A_DAY">近一天</option>
+        <option value="LAST_A_WEEK">近一周</option>
+        <option value="LAST_A_MONTH">近一月</option>
+        <option value="LAST_A_YEAR">近一年</option>
+    </select>
+	<span style="margin-left:50px;">数据范围： </span>
+	<span id="iterNum" style="font-size:14px;font-weight:bold;color:red;">近十分钟</span>
+	<a href="/src-js/migrator/examples/test/chart.html" target="_blank" style="font-size:14px;margin-left:20px;text-decoration:underline;">查看另一个代码前一示例</a>
+</div>
+
+<div class="host_list_chart">
+    <div class="host_list" id="hostList">
+        <ul>
+        </ul>
+    </div>
+    <div class="host_list_right" id="sourceDataChart"></div>
+</div>
+<div>
+    <div class="left m_l_10" style="width: 45%;">
+        <button class="btn_link" id="btnAnalysisLocal" >分析(本地)</button>
+        <div class="pie_chart" id="localResultChart"></div>
+        <div class="tip">耗时：</div>
+        <!--<div class="suggestion">建议：</div>-->
+    </div>
+    <div class="left m_l_10" style="width: 45%;">
+        <button class="btn_link" id="btnAnalysisServer">分析(服务端)</button>
+        <div class="pie_chart" id="serverResultChart"></div>
+        <div class="tip">耗时：</div>
+        <!--<div class="suggestion">建议：</div>-->
+    </div>
+</div>
